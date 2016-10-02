@@ -17,11 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        /**
-         
-         * Manually test your classes here.
-         
-         */
+           //let car2 = Vehicle(name: "Porche", weight: 300.0, maxSpeed: 50.0)
+            //car2.accelerate()
+        
         
         // Do not alter
         return true  //

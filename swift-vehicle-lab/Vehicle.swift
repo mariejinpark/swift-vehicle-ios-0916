@@ -31,39 +31,30 @@ class Vehicle {
     func accelerate() {
         speed += (1/10) * maxSpeed
         if speed > maxSpeed {
-          speed -= (1/10) * maxSpeed
+          speed = maxSpeed
         }
     }
     
     func decelerate() {
         speed -= (1/10) * maxSpeed
-        if speed > 0 {
-            speed += (1/10) * maxSpeed
+        if speed < 0 {
+            speed = 0
         }
     }
     
     func turnRight() {
-        heading += 90
-        speed = speed / 2
-        if heading > 360 {
-            heading -= 360
-        }
-        if speed == 0 {
-            heading = 0
+        if speed > 0 {
+            heading = (heading + 90).truncatingRemainder(dividingBy: 360)
+            speed /= 2
         }
     }
     
     func turnLeft() {
-        heading -= 90
-        speed = speed / 2
-        if heading < 0 {
-            heading = 360 - heading
-        }
-        if speed == 0 {
-            heading = 0
+        if speed > 0 {
+            heading = (heading + 270).truncatingRemainder(dividingBy: 360)
+            speed /= 2
         }
     }
-
 
 }
 
